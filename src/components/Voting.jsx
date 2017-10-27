@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Vote from './Vote'
+import Winner from './Winner'
 
 class Voting extends Component {
   render() {

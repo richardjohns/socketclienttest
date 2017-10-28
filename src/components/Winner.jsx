@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-class Winner extends Component {
+class Winner extends PureComponent {
   render() {
     return (
       <div className="winner">

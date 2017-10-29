@@ -1,15 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ReactTestUtils from 'react-dom/test-utils'
 import {
   renderIntoDocument,
   scryRenderedDOMComponentsWithTag,
   Simulate
 } from 'react-dom/test-utils'
 import {List} from 'immutable'
+import {expect} from 'chai'
 
 import Voting from '../src/components/Voting'
-import { expect } from 'chai'
 
 describe('Voting', () => {
 

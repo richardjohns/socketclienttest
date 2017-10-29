@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 
 import Winner from './Winner'
+import * as actionCreators from '../action_creators'
 
 class Results extends PureComponent {
   getPair() {
@@ -44,6 +45,6 @@ function mapStateToProps(state) {
     winner: state.get('winner')
   }
 }
-const ResultsContainer = connect(mapStateToProps)(Results)
+const ResultsContainer = connect(mapStateToProps, actionCreators)(Results)
 
 module.exports = {Results, ResultsContainer}

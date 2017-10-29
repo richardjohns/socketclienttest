@@ -1,13 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {HashRouter} from 'react-router-dom'
-import {createStore} from 'redux'
+import {createStore, compose} from 'redux'
 import {Provider} from 'react-redux'
+import io from 'socket.io-client'
 
 import reducer from './reducer'
 import App from './components/App'
 
-const store = createStore(reducer)
+const socket = io(`${location.protocol}//${location.hostname}:8090`)
+
+const store = createStore(reducer, compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+))
 
 store.dispatch({
   type: 'SET_STATE',
@@ -18,11 +23,12 @@ store.dispatch({
     }
   }
 })
+
 ReactDOM.render(
+  <HashRouter>
   <Provider store={store}>
-    <HashRouter>
       <App />
-    </HashRouter>
-  </Provider>,
+  </Provider>
+</HashRouter>,
   document.getElementById('app')
 )

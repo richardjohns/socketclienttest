@@ -9,7 +9,7 @@ import {
 import {List, Map} from 'immutable'
 import {expect} from 'chai'
 
-import Results from '../src/components/Results'
+import {Results} from '../src/components/Results'
 
 describe('Results', () => {
 

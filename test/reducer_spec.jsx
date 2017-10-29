@@ -3,7 +3,7 @@ import {expect} from 'chai'
 
 import reducer from '../src/reducer'
 
-describe('reducer', () => {
+describe('Reducer', () => {
 
   it('handles SET_STATE', () => {
     const initialState = Map()

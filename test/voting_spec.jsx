@@ -1,14 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  renderIntoDocument,
-  scryRenderedDOMComponentsWithTag,
-  Simulate
-} from 'react-dom/test-utils'
 import {List} from 'immutable'
 import {expect} from 'chai'
+import {renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate} from 'react-dom/test-utils'
 
-import Voting from '../src/components/Voting'
+import {Voting} from '../src/components/Voting'
 
 describe('Voting', () => {
 
@@ -58,8 +54,7 @@ describe('Voting', () => {
   let component = ReactDOM.render(
     <Voting pair={pair} />,
     container
-  );
-
+  )
   let firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0]
   expect(firstButton.textContent).to.equal('Trainspotting')
   pair[0] = 'Sunshine'

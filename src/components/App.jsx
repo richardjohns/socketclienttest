@@ -3,20 +3,17 @@ import ReactDOM from 'react-dom'
 import {Router, Route} from 'react-router-dom'
 import {List, Map} from 'immutable'
 
-import {Voting, VotingContainer} from './Voting'
-import {Results, ResultsContainer} from './Results'
-
-const pair = List.of('Trainspotting', '28 Days Later')
-const tally = Map({'Trainspotting':5, '28 Days Later':4})
+import {VotingContainer} from './Voting'
+import {ResultsContainer} from './Results'
 
 class App extends Component {
   render() {
     return (
       <div>
         <Route exact path="/" component={() =>
-          <VotingContainer pair={pair} hasVoted="Trainspotting"/>} />
+          <VotingContainer />} />
         <Route path="/results" component={() =>
-          <ResultsContainer pair={pair} tally={tally}/>} />
+          <ResultsContainer />} />
       </div>
     )
   }

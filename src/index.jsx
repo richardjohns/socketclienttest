@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Voting from './components/Voting'
+import {HashRouter} from 'react-router-dom'
 
-const pair = ['Trainspotting', '28 Days Later']
+import App from './components/App'
 
-ReactDOM. render(
-  <Voting pair={pair} hasVoted="Trainspotting" />,
-  document.getElementById('app')
-)
+ReactDOM.render((
+  <HashRouter>
+    <App />
+  </HashRouter>
+), document.getElementById('app') )

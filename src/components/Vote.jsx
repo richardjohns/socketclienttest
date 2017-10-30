@@ -12,15 +12,20 @@ class Vote extends PureComponent {
   }
   render() {
     return (
-      <div className='vote'>
+      <div className='vote container center'>
+        <h3>Vote</h3>
         {this.getPair().map(entry =>
-          <button key={entry}
-            disabled={this.isDisabled()}
-            onClick={() => this.props.vote(entry)}>
-            <h1>{entry}</h1>
-            {this.hasVotedFor(entry) ?
-              <div className="label">Voted</div> : null}
-          </button>
+
+
+          <a className="waves-effect waves-light btn-large"
+              key={entry}
+              disabled={this.isDisabled()}
+              onClick={() => this.props.vote(entry)}>
+                <h4>{entry}</h4>
+                  {this.hasVotedFor(entry) ?
+                    <div className="label">Voted</div> : null}
+          </a>
+
         )}
       </div>
     )

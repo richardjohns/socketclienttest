@@ -17,11 +17,14 @@ class Results extends PureComponent {
   render() {
     return this.props.winner ?
       <Winner ref="winner" winner={this.props.winner} /> :
-      <div className="results">
+      <div className="results container center">
+        <div>
+          <h3>Results</h3>
+        </div>
         <div className="tally">
           {this.getPair().map(entry =>
             <div key={entry} className="entry">
-              <h1>{entry}</h1>
+              <h4>{entry}</h4>
               <div className="voteCount">
                 <h3>{this.getVotes(entry)}</h3>
               </div>
@@ -29,11 +32,9 @@ class Results extends PureComponent {
           )}
         </div>
         <div className="management">
-          <button ref="next"
-                  className="next"
-                  onClick={this.props.next}>
+          <a className="next waves-effect waves-light btn" ref="next" onClick={this.props.next}>
             Next
-          </button>
+          </a>
         </div>
       </div>
   }

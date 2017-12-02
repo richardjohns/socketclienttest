@@ -7,7 +7,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test:watch": "npm run test -- --watch",
     "webpack": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "knex": "knex"
   },
   "keywords": [],
   "author": "",
@@ -35,7 +36,10 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "immutable": "^3.8.2",
+    "jest": "^21.2.1",
+    "knex": "^0.14.2",
     "react": "^16.0.0",
     "react-addons-test-utils": "^15.6.2",
     "react-countdown-clock": "^2.0.0",
@@ -47,6 +51,7 @@
     "react-youtube": "^7.5.0",
     "redux": "^3.7.2",
     "socket.io-client": "^2.0.4",
+    "sqlite3": "^3.1.13",
     "superagent": "^3.8.1"
   }
 }

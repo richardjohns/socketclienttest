@@ -9,7 +9,7 @@ import reducer from './reducer'
 import reducers from '../client/reducers/index'
 import {setState} from './action_creators'
 import remoteActionMiddleware from './remote_action_middleware'
-import App from './components/App'
+import App from '../client/components/App'
 
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`)

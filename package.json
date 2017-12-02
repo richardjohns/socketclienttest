@@ -7,8 +7,9 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test:watch": "npm run test -- --watch",
     "webpack": "webpack",
-    "start": "webpack-dev-server",
-    "knex": "knex"
+    "start": "node server/index",
+    "knex": "knex",
+    "babel": "babel"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,8 @@
     ],
     "presets": [
       "es2015",
-      "react"
+      "react",
+      "env"
     ]
   },
   "devDependencies": {
@@ -36,6 +38,8 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "express": "^4.16.2",
     "immutable": "^3.8.2",
     "jest": "^21.2.1",

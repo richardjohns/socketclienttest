@@ -19,7 +19,7 @@ class Leaderboard extends React.Component {
     this.toggleModal = this.toggleModal.bind(this)
   }
 
-  toggleModal = () => {
+  toggleModal() {
     this.setState({
       isOpen: !this.state.isOpen
     });

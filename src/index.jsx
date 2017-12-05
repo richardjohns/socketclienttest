@@ -14,14 +14,14 @@ import App from '../client/components/App'
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`)
 socket.on('state', state =>
-store.dispatch(setState(state))
+  store.dispatch(setState(state))
 )
 
 const createStoreWithMiddleware = applyMiddleware(
   remoteActionMiddleware(socket))(createStore)
 
-const store = createStoreWithMiddleware (reducers, compose(
-  window.devToolsExtension ? window.devToolsExtension() : f => f
+  const store = createStoreWithMiddleware (reducers, compose(
+    window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
 
 

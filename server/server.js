@@ -22,3 +22,6 @@ server.get('*', (req, res) => {
 })
 
 module.exports = server
+
+
+// look for express libraries integrating websockets
